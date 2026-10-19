@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Arslan Weblab</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../assets/logo/logo.png" type="image/png">
+
+    <noscript><style>#pageLoader{display:none!important;}</style></noscript>
+    <script>
+        (function() {
+            var validThemes = ["system", "dark-blue", "light-blue", "white", "multi"];
+            var saved = "system";
+            try {
+                var stored = localStorage.getItem("selectedTheme") || localStorage.getItem("arslanWeblabTheme");
+                if (stored === "black") {
+                    saved = "dark-blue";
+                } else if (validThemes.indexOf(stored) !== -1) {
+                    saved = stored;
+                }
+            } catch (e) {
+                saved = "system";
+            }
+            var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var applied = saved === "system" ? (systemDark ? "dark-blue" : "light-blue") : saved;
+            document.documentElement.setAttribute("data-theme", applied);
+            document.documentElement.setAttribute("data-selected-theme", saved);
+        })();
+    </script>
+</head>
+
+
+<body>
+
+    <div id="pageLoader" class="page-loader" aria-hidden="true">
+        <div class="loader-track">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+  
+
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main Navigation">
+
+            <a href="../index.html" class="brand">
+                <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                Arslan<span> Weblab</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="about.html#skills" class="nav-link">Skills</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <div class="theme-switcher">
+                    <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-expanded="false"
+                        aria-controls="themeOptions" aria-label="Theme menu">
+                        <span class="theme-toggle-icon">◐</span>
+                        <span>Theme</span>
+                        <span class="theme-toggle-arrow">⌄</span>
+                    </button>
+
+                    <div class="theme-options" id="themeOptions" hidden>
+                        <div class="theme-options-heading">Choose a Theme</div>
+
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="more-button" id="moreButton" type="button" aria-label="Open more navigation"
+                    aria-expanded="false" aria-controls="moreMenu" title="More">
+                    ⋮
+                </button>
+
+                <a href="contact.html" class="nav-cta">Let's Talk</a>
+
+            </div>
+
+            <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+        <div class="more-menu" id="moreMenu" aria-label="More navigation links">
+            <a href="case-studies.html">
+                <span>Case Studies</span>
+                <span>↗</span>
+            </a>
+            <a href="services.html#process">
+                <span>Process</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#testimonials">
+                <span>Testimonials</span>
+                <span>↗</span>
+            </a>
+            <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#developer">
+                <span>Developer</span>
+                <span>↗</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+
+            
+            <div class="mobile-menu-section mobile-primary-nav">
+                <div class="mobile-section-label">Navigation</div>
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-nav-link">Home</a>
+                    <a href="projects.html" class="mobile-nav-link">Projects</a>
+                    <a href="services.html" class="mobile-nav-link active">Services</a>
+                    <a href="about.html" class="mobile-nav-link">About</a>
+                    <a href="about.html#skills" class="mobile-nav-link">Skills</a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-additional-nav">
+                <div class="mobile-section-label">More Links</div>
+                <div class="mobile-menu-links">
+                    <a href="case-studies.html" class="mobile-nav-link">
+                        <span>Case Studies</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="services.html#process" class="mobile-nav-link">
+                        <span>Process</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#testimonials" class="mobile-nav-link">
+                        <span>Testimonials</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
+                        <span>GitHub</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#developer" class="mobile-nav-link">
+                        <span>Developer</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-theme-section">
+                <div class="mobile-theme-wrapper">
+                    <button class="mobile-theme-button" id="mobileThemeButton" type="button" aria-expanded="false"
+                        aria-controls="mobileThemeOptions">
+                        <span class="mobile-theme-button-left">
+                            <span class="theme-toggle-icon">◐</span>
+                            <span>Theme:</span>
+                            <strong id="mobileThemeName">Multicolor</strong>
+                        </span>
+                        <span class="mobile-extra-arrow">⌄</span>
+                    </button>
+
+                    <div class="mobile-theme-options" id="mobileThemeOptions" hidden>
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-contact-section">
+                <a href="contact.html" class="mobile-cta">
+                    <span>Let's Talk</span>
+                    <span>→</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="page-hero-container">
+
+                <span class="section-label">MY SERVICES</span>
+
+                <h1>
+                    Web Solutions Built
+                    <span>For The Modern Web</span>
+                </h1>
+
+                <p>
+                    I create responsive, interactive and practical web
+                    experiences focused on clean design and useful functionality.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="services-page-section">
+            <div class="services-page-container">
+
+                <div class="services-page-heading">
+                    <span class="section-label">WHAT I OFFER</span>
+
+                    <h2>
+                        Services For
+                        <span>Digital Projects</span>
+                    </h2>
+
+                    <p>
+                        From responsive websites to interactive applications,
+                        I focus on building experiences that work smoothly
+                        across modern devices.
+                    </p>
+                </div>
+
+                <div class="services-page-grid">
+
+                    <article class="services-page-card">
+                        <div class="services-page-number">01</div>
+
+                        <div class="services-page-icon">WEB</div>
+
+                        <h3>Frontend Development</h3>
+
+                        <p>
+                            Modern websites built with structured HTML,
+                            responsive CSS and JavaScript functionality.
+                        </p>
+
+                        <div class="services-page-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </article>
+
+                    <article class="services-page-card">
+                        <div class="services-page-number">02</div>
+
+                        <div class="services-page-icon">UI</div>
+
+                        <h3>Responsive Web Design</h3>
+
+                        <p>
+                            Clean and responsive interfaces that adapt
+                            naturally across desktops, tablets and mobile devices.
+                        </p>
+
+                        <div class="services-page-tags">
+                            <span>Responsive</span>
+                            <span>UI</span>
+                            <span>UX</span>
+                        </div>
+                    </article>
+
+                    <article class="services-page-card">
+                        <div class="services-page-number">03</div>
+
+                        <div class="services-page-icon">JS</div>
+
+                        <h3>Interactive Web Apps</h3>
+
+                        <p>
+                            Interactive applications with dynamic content,
+                            useful functionality and JavaScript-powered features.
+                        </p>
+
+                        <div class="services-page-tags">
+                            <span>JavaScript</span>
+                            <span>DOM</span>
+                            <span>API</span>
+                        </div>
+                    </article>
+
+                    <article class="services-page-card">
+                        <div class="services-page-number">04</div>
+
+                        <div class="services-page-icon">API</div>
+
+                        <h3>API Integration</h3>
+
+                        <p>
+                            Connecting web applications with external APIs
+                            to display and work with useful data.
+                        </p>
+
+                        <div class="services-page-tags">
+                            <span>REST</span>
+                            <span>API</span>
+                            <span>JSON</span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="services-process-section" id="process">
+            <div class="services-process-container">
+
+                <div class="services-process-heading">
+                    <span class="section-label">HOW I WORK</span>
+
+                    <h2>
+                        A Simple Process From
+                        <span>Idea To Build</span>
+                    </h2>
+                </div>
+
+                <div class="services-process-grid">
+
+                    <div class="services-process-item">
+                        <span>01</span>
+                        <h3>Understand</h3>
+                        <p>
+                            Understand the project goals, audience and required features.
+                        </p>
+                    </div>
+
+                    <div class="services-process-item">
+                        <span>02</span>
+                        <h3>Design</h3>
+                        <p>
+                            Plan the structure and create a clear responsive interface.
+                        </p>
+                    </div>
+
+                    <div class="services-process-item">
+                        <span>03</span>
+                        <h3>Develop</h3>
+                        <p>
+                            Build the website with clean code and useful functionality.
+                        </p>
+                    </div>
+
+                    <div class="services-process-item">
+                        <span>04</span>
+                        <h3>Refine</h3>
+                        <p>
+                            Test, improve and polish the final experience across devices.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="services-cta-section">
+            <div class="services-cta-container">
+
+                <span class="section-label">HAVE A PROJECT?</span>
+
+                <h2>
+                    Let's Build Something
+                    <span>Useful Together</span>
+                </h2>
+
+                <p>
+                    Have an idea for a website or web application?
+                    Let's discuss the project and turn the idea into a real experience.
+                </p>
+
+                <a href="contact.html" class="services-cta-btn">
+                    Start A Project
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                        Arslan <span>Weblab</span>
+                    </a>
+
+                    <p>
+                        Building modern, responsive and interactive
+                        digital experiences for the modern web.
+                    </p>
+
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                        class="footer-github">
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Navigation</h3>
+
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Explore</h3>
+
+                    <a href="projects.html">My Work</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Let's Talk</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Arslan Weblab. All rights reserved.</span>
+                <span>Built by Arslan</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+
+</body>
+
+</html>

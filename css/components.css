@@ -1,0 +1,27 @@
+.contact-submit-btn {
+    min-height: 50px;
+    padding: 0 25px;
+    border: 1px solid var(--accent);
+    border-radius: 9px;
+    background: var(--accent);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    background: var(--accent-hover);
+    color: #ffffff;
+    box-shadow: 0 8px 24px var(--blue-glow, rgba(67, 56, 202, 0.25));
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.contact-submit-btn:focus-visible {
+    outline: 3px solid var(--accent-soft);
+    outline-offset: 3px;
+}

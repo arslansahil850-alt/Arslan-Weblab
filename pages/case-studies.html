@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Arslan Weblab</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../assets/logo/logo.png" type="image/png">
+
+    <noscript><style>#pageLoader{display:none!important;}</style></noscript>
+    <script>
+        (function() {
+            var validThemes = ["system", "dark-blue", "light-blue", "white", "multi"];
+            var saved = "system";
+            try {
+                var stored = localStorage.getItem("selectedTheme") || localStorage.getItem("arslanWeblabTheme");
+                if (stored === "black") {
+                    saved = "dark-blue";
+                } else if (validThemes.indexOf(stored) !== -1) {
+                    saved = stored;
+                }
+            } catch (e) {
+                saved = "system";
+            }
+            var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var applied = saved === "system" ? (systemDark ? "dark-blue" : "light-blue") : saved;
+            document.documentElement.setAttribute("data-theme", applied);
+            document.documentElement.setAttribute("data-selected-theme", saved);
+        })();
+    </script>
+</head>
+
+
+<body>
+
+    <div id="pageLoader" class="page-loader" aria-hidden="true">
+        <div class="loader-track">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main Navigation">
+
+            <a href="../index.html" class="brand">
+                <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                Arslan<span> Weblab</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="about.html#skills" class="nav-link">Skills</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <div class="theme-switcher">
+                    <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-expanded="false"
+                        aria-controls="themeOptions" aria-label="Theme menu">
+                        <span class="theme-toggle-icon">◐</span>
+                        <span>Theme</span>
+                        <span class="theme-toggle-arrow">⌄</span>
+                    </button>
+
+                    <div class="theme-options" id="themeOptions" hidden>
+                        <div class="theme-options-heading">Choose a Theme</div>
+
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="more-button" id="moreButton" type="button" aria-label="Open more navigation"
+                    aria-expanded="false" aria-controls="moreMenu" title="More">
+                    ⋮
+                </button>
+
+                <a href="contact.html" class="nav-cta">Let's Talk</a>
+
+            </div>
+
+            <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+        <div class="more-menu" id="moreMenu" aria-label="More navigation links">
+            <a href="case-studies.html" class="active">
+                <span>Case Studies</span>
+                <span>↗</span>
+            </a>
+            <a href="services.html#process">
+                <span>Process</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#testimonials">
+                <span>Testimonials</span>
+                <span>↗</span>
+            </a>
+            <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#developer">
+                <span>Developer</span>
+                <span>↗</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+
+            
+            <div class="mobile-menu-section mobile-primary-nav">
+                <div class="mobile-section-label">Navigation</div>
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-nav-link">Home</a>
+                    <a href="projects.html" class="mobile-nav-link">Projects</a>
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="about.html" class="mobile-nav-link">About</a>
+                    <a href="about.html#skills" class="mobile-nav-link">Skills</a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-additional-nav">
+                <div class="mobile-section-label">More Links</div>
+                <div class="mobile-menu-links">
+                    <a href="case-studies.html" class="mobile-nav-link active">
+                        <span>Case Studies</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="services.html#process" class="mobile-nav-link">
+                        <span>Process</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#testimonials" class="mobile-nav-link">
+                        <span>Testimonials</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
+                        <span>GitHub</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#developer" class="mobile-nav-link">
+                        <span>Developer</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-theme-section">
+                <div class="mobile-theme-wrapper">
+                    <button class="mobile-theme-button" id="mobileThemeButton" type="button" aria-expanded="false"
+                        aria-controls="mobileThemeOptions">
+                        <span class="mobile-theme-button-left">
+                            <span class="theme-toggle-icon">◐</span>
+                            <span>Theme:</span>
+                            <strong id="mobileThemeName">Multicolor</strong>
+                        </span>
+                        <span class="mobile-extra-arrow">⌄</span>
+                    </button>
+
+                    <div class="mobile-theme-options" id="mobileThemeOptions" hidden>
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-contact-section">
+                <a href="contact.html" class="mobile-cta">
+                    <span>Let's Talk</span>
+                    <span>→</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="page-hero-container">
+
+                <span class="section-label">CASE STUDIES</span>
+
+                <h1>
+                    Behind The
+                    <span>Projects I Build</span>
+                </h1>
+
+                <p>
+                    Explore the ideas, challenges, technologies and development
+                    decisions behind selected projects.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="case-studies-section">
+            <div class="case-studies-container">
+
+                <div class="case-studies-heading">
+
+                    <div>
+                        <span class="section-label">PROJECT BREAKDOWN</span>
+
+                        <h2>
+                            From Idea
+                            <span>To Experience</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        These case studies explain how individual projects
+                        were planned, designed and developed.
+                    </p>
+
+                </div>
+
+                <div class="case-studies-grid">
+
+                    <article class="case-study-card">
+
+                        <div class="case-study-visual">
+                            <span>CASE 01</span>
+                            <strong>SHOPORA</strong>
+                        </div>
+
+                        <div class="case-study-content">
+
+                            <div class="case-study-meta">
+                                <span>E-COMMERCE</span>
+                                <span>HTML / CSS</span>
+                            </div>
+
+                            <h3>
+                                Building A Modern
+                                Shopping Interface
+                            </h3>
+
+                            <p>
+                                A responsive e-commerce interface focused on
+                                product presentation, clean layouts and a smooth
+                                browsing experience.
+                            </p>
+
+                            <div class="case-study-details">
+
+                                <div>
+                                    <span>ROLE</span>
+                                    <strong>Frontend Developer</strong>
+                                </div>
+
+                                <div>
+                                    <span>FOCUS</span>
+                                    <strong>Responsive UI</strong>
+                                </div>
+
+                            </div>
+
+                            <a href="projects.html" class="case-study-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="case-study-card">
+
+                        <div class="case-study-visual">
+                            <span>CASE 02</span>
+                            <strong>WEATHER</strong>
+                        </div>
+
+                        <div class="case-study-content">
+
+                            <div class="case-study-meta">
+                                <span>WEB APP</span>
+                                <span>JAVASCRIPT / API</span>
+                            </div>
+
+                            <h3>
+                                Connecting A Website
+                                With Real Data
+                            </h3>
+
+                            <p>
+                                A weather application exploring API requests,
+                                JSON data, dynamic content and interactive
+                                JavaScript functionality.
+                            </p>
+
+                            <div class="case-study-details">
+
+                                <div>
+                                    <span>ROLE</span>
+                                    <strong>Frontend Developer</strong>
+                                </div>
+
+                                <div>
+                                    <span>FOCUS</span>
+                                    <strong>API Integration</strong>
+                                </div>
+
+                            </div>
+
+                            <a href="projects.html" class="case-study-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="case-study-card">
+
+                        <div class="case-study-visual">
+                            <span>CASE 03</span>
+                            <strong>TODO</strong>
+                        </div>
+
+                        <div class="case-study-content">
+
+                            <div class="case-study-meta">
+                                <span>WEB APP</span>
+                                <span>JAVASCRIPT</span>
+                            </div>
+
+                            <h3>
+                                Turning Simple Ideas
+                                Into Interactive Apps
+                            </h3>
+
+                            <p>
+                                A task management application focused on DOM
+                                manipulation, user interaction and dynamic
+                                interface updates.
+                            </p>
+
+                            <div class="case-study-details">
+
+                                <div>
+                                    <span>ROLE</span>
+                                    <strong>Frontend Developer</strong>
+                                </div>
+
+                                <div>
+                                    <span>FOCUS</span>
+                                    <strong>JavaScript Logic</strong>
+                                </div>
+
+                            </div>
+
+                            <a href="projects.html" class="case-study-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="case-study-process-section">
+            <div class="case-study-process-container">
+
+                <div class="case-study-process-heading">
+
+                    <span class="section-label">MY APPROACH</span>
+
+                    <h2>
+                        How I Turn
+                        <span>Ideas Into Projects</span>
+                    </h2>
+
+                </div>
+
+                <div class="case-study-process-grid">
+
+                    <div class="case-study-process-item">
+                        <span>01</span>
+                        <h3>Research</h3>
+                        <p>
+                            Understand the purpose, users and main requirements
+                            of the project.
+                        </p>
+                    </div>
+
+                    <div class="case-study-process-item">
+                        <span>02</span>
+                        <h3>Plan</h3>
+                        <p>
+                            Organize the structure, content and functionality
+                            before development begins.
+                        </p>
+                    </div>
+
+                    <div class="case-study-process-item">
+                        <span>03</span>
+                        <h3>Build</h3>
+                        <p>
+                            Develop the interface and functionality using
+                            suitable web technologies.
+                        </p>
+                    </div>
+
+                    <div class="case-study-process-item">
+                        <span>04</span>
+                        <h3>Improve</h3>
+                        <p>
+                            Test the project, fix issues and refine the
+                            experience across different devices.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="case-study-cta-section">
+            <div class="case-study-cta-container">
+
+                <span class="section-label">BUILD SOMETHING</span>
+
+                <h2>
+                    Have An Idea?
+                    <span>Let's Build It</span>
+                </h2>
+
+                <p>
+                    If you have a website or web application idea,
+                    explore my services or get in touch to discuss it.
+                </p>
+
+                <div class="case-study-cta-buttons">
+
+                    <a href="services.html" class="case-study-cta-primary">
+                        View Services
+                    </a>
+
+                    <a href="contact.html" class="case-study-cta-secondary">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                        Arslan <span>Weblab</span>
+                    </a>
+
+                    <p>
+                        Building modern, responsive and interactive
+                        digital experiences for the modern web.
+                    </p>
+
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                        class="footer-github">
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Navigation</h3>
+
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Explore</h3>
+
+                    <a href="projects.html">My Work</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Let's Talk</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Arslan Weblab. All rights reserved.</span>
+                <span>Built by Arslan</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+
+</body>
+
+</html>

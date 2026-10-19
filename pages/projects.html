@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Arslan Weblab</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../assets/logo/logo.png" type="image/png">
+
+    <noscript><style>#pageLoader{display:none!important;}</style></noscript>
+    <script>
+        (function() {
+            var validThemes = ["system", "dark-blue", "light-blue", "white", "multi"];
+            var saved = "system";
+            try {
+                var stored = localStorage.getItem("selectedTheme") || localStorage.getItem("arslanWeblabTheme");
+                if (stored === "black") {
+                    saved = "dark-blue";
+                } else if (validThemes.indexOf(stored) !== -1) {
+                    saved = stored;
+                }
+            } catch (e) {
+                saved = "system";
+            }
+            var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var applied = saved === "system" ? (systemDark ? "dark-blue" : "light-blue") : saved;
+            document.documentElement.setAttribute("data-theme", applied);
+            document.documentElement.setAttribute("data-selected-theme", saved);
+        })();
+    </script>
+</head>
+
+
+<body>
+
+    <div id="pageLoader" class="page-loader" aria-hidden="true">
+        <div class="loader-track">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+ 
+
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main Navigation">
+
+            <a href="../index.html" class="brand">
+                <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                Arslan<span> Weblab</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="about.html#skills" class="nav-link">Skills</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <div class="theme-switcher">
+                    <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-expanded="false"
+                        aria-controls="themeOptions" aria-label="Theme menu">
+                        <span class="theme-toggle-icon">◐</span>
+                        <span>Theme</span>
+                        <span class="theme-toggle-arrow">⌄</span>
+                    </button>
+
+                    <div class="theme-options" id="themeOptions" hidden>
+                        <div class="theme-options-heading">Choose a Theme</div>
+
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="more-button" id="moreButton" type="button" aria-label="Open more navigation"
+                    aria-expanded="false" aria-controls="moreMenu" title="More">
+                    ⋮
+                </button>
+
+                <a href="contact.html" class="nav-cta">Let's Talk</a>
+
+            </div>
+
+            <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+        <div class="more-menu" id="moreMenu" aria-label="More navigation links">
+            <a href="case-studies.html">
+                <span>Case Studies</span>
+                <span>↗</span>
+            </a>
+            <a href="services.html#process">
+                <span>Process</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#testimonials">
+                <span>Testimonials</span>
+                <span>↗</span>
+            </a>
+            <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#developer">
+                <span>Developer</span>
+                <span>↗</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+
+            
+            <div class="mobile-menu-section mobile-primary-nav">
+                <div class="mobile-section-label">Navigation</div>
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-nav-link">Home</a>
+                    <a href="projects.html" class="mobile-nav-link active">Projects</a>
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="about.html" class="mobile-nav-link">About</a>
+                    <a href="about.html#skills" class="mobile-nav-link">Skills</a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-additional-nav">
+                <div class="mobile-section-label">More Links</div>
+                <div class="mobile-menu-links">
+                    <a href="case-studies.html" class="mobile-nav-link">
+                        <span>Case Studies</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="services.html#process" class="mobile-nav-link">
+                        <span>Process</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#testimonials" class="mobile-nav-link">
+                        <span>Testimonials</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
+                        <span>GitHub</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#developer" class="mobile-nav-link">
+                        <span>Developer</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-theme-section">
+                <div class="mobile-theme-wrapper">
+                    <button class="mobile-theme-button" id="mobileThemeButton" type="button" aria-expanded="false"
+                        aria-controls="mobileThemeOptions">
+                        <span class="mobile-theme-button-left">
+                            <span class="theme-toggle-icon">◐</span>
+                            <span>Theme:</span>
+                            <strong id="mobileThemeName">Multicolor</strong>
+                        </span>
+                        <span class="mobile-extra-arrow">⌄</span>
+                    </button>
+
+                    <div class="mobile-theme-options" id="mobileThemeOptions" hidden>
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-contact-section">
+                <a href="contact.html" class="mobile-cta">
+                    <span>Let's Talk</span>
+                    <span>→</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="page-hero-container">
+
+                <span class="section-label">MY PROJECTS</span>
+
+                <h1>
+                    <span>
+                        Projects
+                    </span>
+                    I
+                    Built & Explored
+                </h1>
+
+                <p>
+                    A collection of websites, applications and experiments
+                    built while developing my skills across modern web technologies.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="projects-page-section">
+            <div class="projects-page-container">
+
+                <div class="projects-page-heading">
+
+                    <div>
+                        <span class="section-label">PROJECT LIBRARY</span>
+
+                        <h2>
+                            Explore My
+                            <span>Work</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Browse through different projects and explore the
+                        technologies and ideas behind each build.
+                    </p>
+
+                </div>
+
+                <div class="projects-filter">
+
+                    <button type="button" class="project-filter active" data-filter="all">
+                        All
+                    </button>
+
+                    <button type="button" class="project-filter" data-filter="html-css">
+                        HTML & CSS
+                    </button>
+
+                    <button type="button" class="project-filter" data-filter="javascript">
+                        JavaScript
+                    </button>
+
+                    <button type="button" class="project-filter" data-filter="web">
+                        Web Apps
+                    </button>
+
+                </div>
+
+                <div class="projects-page-grid">
+
+                    <article class="project-page-card" data-category="web">
+
+                        <div class="project-page-image">
+                            <span>01</span>
+                            <strong>FOODIE</strong>
+                        </div>
+
+                        <div class="project-page-content">
+
+                            <div class="project-page-meta">
+                                <span>WEB APP</span>
+                                <span>01</span>
+                            </div>
+
+                            <h3>Restaurant Website</h3>
+
+                            <p>
+                                A responsive food website built with HTML, CSS, and JavaScript, featuring interactive
+                                food sections and a clean, engaging interface.
+                            </p>
+
+                            <div class="project-page-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Responsive</span>
+                            </div>
+
+                            <a href="https://foodie-website-by-arslan.netlify.app/" target="_blank"
+                                class="project-page-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-page-card" data-category="html-css">
+
+                        <div class="project-page-image">
+                            <span>01</span>
+                            <strong>SHOPORA</strong>
+                        </div>
+
+                        <div class="project-page-content">
+
+                            <div class="project-page-meta">
+                                <span>HTML & CSS</span>
+                                <span>01</span>
+                            </div>
+
+                            <h3>E-Commerce Website</h3>
+
+                            <p>
+                                A modern shopping interface focused on
+                                responsive layouts and clean product presentation.
+                            </p>
+
+                            <div class="project-page-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Responsive</span>
+                            </div>
+
+                            <a href="#" class="project-page-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-page-card" data-category="javascript">
+
+                        <div class="project-page-image">
+                            <span>02</span>
+                            <strong>CALCULATOR</strong>
+                        </div>
+
+                        <div class="project-page-content">
+
+                            <div class="project-page-meta">
+                                <span>JAVASCRIPT</span>
+                                <span>02</span>
+                            </div>
+
+                            <h3>JavaScript Calculator</h3>
+
+                            <p>
+                                An interactive calculator built with JavaScript
+                                for handling calculations through a responsive interface.
+                            </p>
+
+                            <div class="project-page-tags">
+                                <span>JavaScript</span>
+                                <span>DOM</span>
+                                <span>UI</span>
+                            </div>
+
+                            <a href="#" class="project-page-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-page-card" data-category="javascript">
+
+                        <div class="project-page-image">
+                            <span>03</span>
+                            <strong>TODO</strong>
+                        </div>
+
+                        <div class="project-page-content">
+
+                            <div class="project-page-meta">
+                                <span>JAVASCRIPT</span>
+                                <span>03</span>
+                            </div>
+
+                            <h3>Todo Application</h3>
+
+                            <p>
+                                A dynamic task management application with
+                                JavaScript-powered interactions and state updates.
+                            </p>
+
+                            <div class="project-page-tags">
+                                <span>JavaScript</span>
+                                <span>DOM</span>
+                                <span>Logic</span>
+                            </div>
+
+                            <a href="#" class="project-page-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-page-card" data-category="web">
+
+                        <div class="project-page-image">
+                            <span>04</span>
+                            <strong>WEATHER</strong>
+                        </div>
+
+                        <div class="project-page-content">
+
+                            <div class="project-page-meta">
+                                <span>WEB APP</span>
+                                <span>04</span>
+                            </div>
+
+                            <h3>Weather Application</h3>
+
+                            <p>
+                                A weather application designed to display
+                                useful weather information through an external API.
+                            </p>
+
+                            <div class="project-page-tags">
+                                <span>JavaScript</span>
+                                <span>API</span>
+                                <span>JSON</span>
+                            </div>
+
+                            <a href="#" class="project-page-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-page-card" data-category="html-css">
+
+                        <div class="project-page-image">
+                            <span>05</span>
+                            <strong>BLOGO</strong>
+                        </div>
+
+                        <div class="project-page-content">
+
+                            <div class="project-page-meta">
+                                <span>HTML & CSS</span>
+                                <span>05</span>
+                            </div>
+
+                            <h3>Blog Website</h3>
+
+                            <p>
+                                A responsive blog interface designed around
+                                readable content, structured sections and modern styling.
+                            </p>
+
+                            <div class="project-page-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>UI</span>
+                            </div>
+
+                            <a href="#" class="project-page-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-page-card" data-category="javascript">
+
+                        <div class="project-page-image">
+                            <span>06</span>
+                            <strong>EXPENSE</strong>
+                        </div>
+
+                        <div class="project-page-content">
+
+                            <div class="project-page-meta">
+                                <span>JAVASCRIPT</span>
+                                <span>06</span>
+                            </div>
+
+                            <h3>Expense Tracker</h3>
+
+                            <p>
+                                An interactive application for organizing
+                                expenses and dynamically updating financial information.
+                            </p>
+
+                            <div class="project-page-tags">
+                                <span>JavaScript</span>
+                                <span>DOM</span>
+                                <span>Data</span>
+                            </div>
+
+                            <a href="#" class="project-page-link">
+                                View Project
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+            <div class="projects-marquee marquee-theme-sunset" aria-label="Types of projects I build">
+                <div class="projects-track">
+                    <div class="projects-group">
+                        <span class="project-marquee-item">Gym & Fitness Websites <span>✦</span></span>
+                        <span class="project-marquee-item">E-commerce Stores <span>✦</span></span>
+                        <span class="project-marquee-item">Real Estate Websites <span>✦</span></span>
+                        <span class="project-marquee-item">Dental Clinic Websites <span>✦</span></span>
+                        <span class="project-marquee-item">SaaS Dashboards <span>✦</span></span>
+                        <span class="project-marquee-item">Business Websites <span>✦</span></span>
+                        <span class="project-marquee-item">Online Learning Platforms <span>✦</span></span>
+                        <span class="project-marquee-item">Hotel Booking Websites <span>✦</span></span>
+                        <span class="project-marquee-item">Food Ordering Websites <span>✦</span></span>
+                        <span class="project-marquee-item">Digital Agency Websites <span>✦</span></span>
+                    </div>
+
+                    <div class="projects-group" aria-hidden="true">
+                        <span class="project-marquee-item">Gym & Fitness Websites <span>✦</span></span>
+                        <span class="project-marquee-item">E-commerce Stores <span>✦</span></span>
+                        <span class="project-marquee-item">Real Estate Websites <span>✦</span></span>
+                        <span class="project-marquee-item">Dental Clinic Websites <span>✦</span></span>
+                        <span class="project-marquee-item">SaaS Dashboards <span>✦</span></span>
+                        <span class="project-marquee-item">Business Websites <span>✦</span></span>
+                        <span class="project-marquee-item">Online Learning Platforms <span>✦</span></span>
+                        <span class="project-marquee-item">Hotel Booking Websites <span>✦</span></span>
+                        <span class="project-marquee-item">Food Ordering Websites <span>✦</span></span>
+                        <span class="project-marquee-item">Digital Agency Websites <span>✦</span></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section class="live-websites-section">
+            <div class="live-websites-container">
+
+                <div class="live-websites-heading">
+                    <span class="section-label">LIVE PROJECT HUB</span>
+
+                    <h2>
+                        Explore My
+                        <span>Published Work</span>
+                    </h2>
+
+                    <p>
+                        Visit my project hub to explore my published websites,
+                        interactive projects, live demos and GitHub repositories.
+                    </p>
+                </div>
+
+                <div class="live-websites-card">
+
+                    <div class="live-websites-card-content">
+
+                        <span>DEVELOPING WITH ARSLAN</span>
+
+                        <h3>
+                            My Complete
+                            <strong>Project Collection</strong>
+                        </h3>
+
+                        <p>
+                            A dedicated collection of my web development projects,
+                            experiments and digital work.
+                        </p>
+
+                        <div class="live-websites-buttons">
+
+                            <a href="https://arslan-weblab.netlify.app/" target="_blank" rel="noopener noreferrer"
+                                class="live-website-btn">
+                                Explore Project Hub
+                            </a>
+
+                            <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                                class="live-website-secondary">
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="live-websites-card-visual">
+                        <span>&lt;/&gt;</span>
+                        <strong>PROJECTS</strong>
+                        <small>LIVE COLLECTION</small>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="projects-page-cta">
+            <div class="projects-page-cta-container">
+
+                <span class="section-label">MORE PROJECTS</span>
+
+                <h2>
+                    More Builds Are
+                    <span>Coming</span>
+                </h2>
+
+                <p>
+                    I'm continuously building new projects as I learn
+                    and explore more areas of web development.
+                </p>
+
+                <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                    class="projects-page-cta-btn">
+                    Explore GitHub
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                        Arslan <span>Weblab</span>
+                    </a>
+
+                    <p>
+                        Building modern, responsive and interactive
+                        digital experiences for the modern web.
+                    </p>
+
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                        class="footer-github">
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Navigation</h3>
+
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Explore</h3>
+
+                    <a href="projects.html">My Work</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Let's Talk</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Arslan Weblab. All rights reserved.</span>
+                <span>Built by Arslan</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/projects.js"></script>
+
+</body>
+
+</html>

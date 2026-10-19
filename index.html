@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arslan Weblab - Professional Web Development Portfolio">
+    <title>Arslan Weblab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="assets/logo/logo.png" type="image/png">
+
+    <noscript><style>#pageLoader{display:none!important;}</style></noscript>
+    <script>
+        (function() {
+            var validThemes = ["system", "dark-blue", "light-blue", "white", "multi"];
+            var saved = "system";
+            try {
+                var stored = localStorage.getItem("selectedTheme") || localStorage.getItem("arslanWeblabTheme");
+                if (stored === "black") {
+                    saved = "dark-blue";
+                } else if (validThemes.indexOf(stored) !== -1) {
+                    saved = stored;
+                }
+            } catch (e) {
+                saved = "system";
+            }
+            var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var applied = saved === "system" ? (systemDark ? "dark-blue" : "light-blue") : saved;
+            document.documentElement.setAttribute("data-theme", applied);
+            document.documentElement.setAttribute("data-selected-theme", saved);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div id="pageLoader" class="page-loader" aria-hidden="true">
+        <div class="loader-track">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main Navigation">
+
+            <a href="index.html" class="brand">
+                <img src="assets/logo/logo.png" alt="Arslan Weblab Logo">
+                Arslan<span> Weblab</span>
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/projects.html" class="nav-link">Projects</a>
+                <a href="pages/services.html" class="nav-link">Services</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/about.html#skills" class="nav-link">Skills</a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <div class="theme-switcher">
+
+                    <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-expanded="false"
+                        aria-controls="themeOptions" aria-label="Theme menu">
+                        <span class="theme-toggle-icon">◐</span>
+                        <span>Theme</span>
+                        <span class="theme-toggle-arrow">⌄</span>
+                    </button>
+
+                    <div class="theme-options" id="themeOptions" hidden>
+
+                        <div class="theme-options-heading">Choose a Theme</div>
+
+                        <button class="theme-option" type="button" data-theme-option="system">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button class="more-button" id="moreButton" type="button" aria-label="Open more navigation"
+                    aria-expanded="false" title="More">
+                    ⋮
+                </button>
+
+                <a href="pages/contact.html" class="nav-cta">Let's Talk</a>
+
+            </div>
+
+            <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+        <div class="more-menu" id="moreMenu" aria-label="More navigation links">
+
+            <a href="pages/case-studies.html">
+                <span>Case Studies</span>
+                <span>↗</span>
+            </a>
+
+            <a href="pages/services.html#process">
+                <span>Process</span>
+                <span>↗</span>
+            </a>
+
+            <a href="pages/about.html#testimonials">
+                <span>Testimonials</span>
+                <span>↗</span>
+            </a>
+
+            <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span>↗</span>
+            </a>
+
+            <a href="pages/about.html#developer">
+                <span>Developer</span>
+                <span>↗</span>
+            </a>
+
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+
+            
+            <div class="mobile-menu-section mobile-primary-nav">
+                <div class="mobile-section-label">Navigation</div>
+                <div class="mobile-menu-links">
+                    <a href="index.html" class="mobile-nav-link active">Home</a>
+                    <a href="pages/projects.html" class="mobile-nav-link">Projects</a>
+                    <a href="pages/services.html" class="mobile-nav-link">Services</a>
+                    <a href="pages/about.html" class="mobile-nav-link">About</a>
+                    <a href="pages/about.html#skills" class="mobile-nav-link">Skills</a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-additional-nav">
+                <div class="mobile-section-label">More Links</div>
+                <div class="mobile-menu-links">
+                    <a href="pages/case-studies.html" class="mobile-nav-link">
+                        <span>Case Studies</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="pages/services.html#process" class="mobile-nav-link">
+                        <span>Process</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="pages/about.html#testimonials" class="mobile-nav-link">
+                        <span>Testimonials</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
+                        <span>GitHub</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="pages/about.html#developer" class="mobile-nav-link">
+                        <span>Developer</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-theme-section">
+                <div class="mobile-theme-wrapper">
+                    <button class="mobile-theme-button" id="mobileThemeButton" type="button" aria-expanded="false"
+                        aria-controls="mobileThemeOptions">
+                        <span class="mobile-theme-button-left">
+                            <span class="theme-toggle-icon">◐</span>
+                            <span>Theme:</span>
+                            <strong id="mobileThemeName">Multicolor</strong>
+                        </span>
+                        <span class="mobile-extra-arrow">⌄</span>
+                    </button>
+
+                    <div class="mobile-theme-options" id="mobileThemeOptions" hidden>
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-contact-section">
+                <a href="pages/contact.html" class="mobile-cta">
+                    <span>Let's Talk</span>
+                    <span>→</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-container">
+
+                <div class="hero-content">
+                    <span class="hero-label">WEB DEVELOPER</span>
+
+                    <h1>
+                        Building <span>Modern</span><br>
+                        Digital Experiences
+                    </h1>
+
+                    <p class="hero-description">
+                        I create modern, responsive and interactive websites
+                        that help ideas turn into powerful digital experiences.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="pages/projects.html" class="hero-btn hero-btn-primary">
+                            Explore My Work
+                        </a>
+
+                        <a href="pages/contact.html" class="hero-btn hero-btn-secondary">
+                            Let's Work Together
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <strong>20+</strong>
+                            <span>Projects</span>
+                        </div>
+
+                        <div class="hero-stat">
+                            <strong>3+</strong>
+                            <span>Years Learning</span>
+                        </div>
+
+                        <div class="hero-stat">
+                            <strong>100%</strong>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-orbit orbit-one"></div>
+                    <div class="hero-orbit orbit-two"></div>
+
+                    <div class="hero-card">
+                        <div class="hero-card-top">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="hero-code">
+                            <div class="code-line code-long"></div>
+                            <div class="code-line code-medium"></div>
+                            <div class="code-line code-short"></div>
+                            <div class="code-space"></div>
+                            <div class="code-line code-medium"></div>
+                            <div class="code-line code-long"></div>
+                            <div class="code-line code-short"></div>
+                            <div class="code-space"></div>
+                            <div class="code-line code-long"></div>
+                            <div class="code-line code-medium"></div>
+                        </div>
+
+                        <div class="hero-card-footer">
+                            <span>Arslan Weblab</span>
+                            <span>01</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-html">
+                        HTML
+                    </div>
+
+                    <div class="floating-badge badge-js">
+                        JS
+                    </div>
+
+                    <div class="floating-badge badge-css">
+                        CSS
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="quick-skills" id="quick-skills">
+            <div class="quick-skills-container">
+
+                <div class="quick-skills-heading">
+                    <span class="section-label">WHAT I DO</span>
+                    <h2>Building for the <span>Modern Web</span></h2>
+                    <p>
+                        I focus on creating responsive, interactive and user-friendly
+                        web experiences using modern frontend technologies.
+                    </p>
+                </div>
+
+                <div class="quick-skills-grid">
+
+                    <div class="quick-skill-card">
+                        <div class="quick-skill-icon">HTML</div>
+                        <h3>HTML5</h3>
+                        <p>Semantic and well-structured web pages.</p>
+                    </div>
+
+                    <div class="quick-skill-card">
+                        <div class="quick-skill-icon">CSS</div>
+                        <h3>CSS3</h3>
+                        <p>Modern layouts, animations and responsive designs.</p>
+                    </div>
+
+                    <div class="quick-skill-card">
+                        <div class="quick-skill-icon">JS</div>
+                        <h3>JavaScript</h3>
+                        <p>Interactive and dynamic web experiences.</p>
+                    </div>
+
+                    <div class="quick-skill-card">
+                        <div class="quick-skill-icon">UI</div>
+                        <h3>Responsive UI</h3>
+                        <p>Interfaces that adapt across devices and screens.</p>
+                    </div>
+
+                    <div class="quick-skill-card">
+                        <div class="quick-skill-icon">API</div>
+                        <h3>API Integration</h3>
+                        <p>Connecting websites with useful external data.</p>
+                    </div>
+
+                    <div class="quick-skill-card">
+                        <div class="quick-skill-icon">WEB</div>
+                        <h3>Web Projects</h3>
+                        <p>Building practical websites and interactive applications.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-preview" id="about">
+            <div class="about-container">
+
+                <div class="about-content">
+                    <span class="section-label">ABOUT ME</span>
+
+                    <h2>
+                        Turning Ideas Into
+                        <span>Digital Experiences</span>
+                    </h2>
+
+                    <p>
+                        I'm Arslan, a web developer focused on creating modern,
+                        responsive and interactive websites. I enjoy turning ideas
+                        into clean, functional and engaging digital experiences.
+                    </p>
+
+                    <p>
+                        My journey started with frontend development, where I have
+                        been building practical projects and continuously expanding
+                        my skills across modern web technologies.
+                    </p>
+
+                    <a href="pages/about.html" class="about-btn">
+                        More About Me
+                    </a>
+                </div>
+
+                <div class="about-highlights">
+
+                    <div class="about-highlight-card">
+                        <span class="about-highlight-number">20+</span>
+                        <span class="about-highlight-text">Projects Built</span>
+                    </div>
+
+                    <div class="about-highlight-card">
+                        <span class="about-highlight-number">6+</span>
+                        <span class="about-highlight-text">Core Skills</span>
+                    </div>
+
+                    <div class="about-highlight-card">
+                        <span class="about-highlight-number">100%</span>
+                        <span class="about-highlight-text">Responsive Focus</span>
+                    </div>
+
+                    <div class="about-highlight-card">
+                        <span class="about-highlight-number">∞</span>
+                        <span class="about-highlight-text">Learning Mindset</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <div class="skills-container">
+
+                <div class="skills-heading">
+                    <span class="section-label">SKILLS & TECHNOLOGIES</span>
+
+                    <h2>
+                        Technologies I
+                        <span>Work With</span>
+                    </h2>
+
+                    <p>
+                        A growing technology stack focused on building modern,
+                        responsive and interactive web applications.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-icon">HTML</div>
+                        <div class="skill-info">
+                            <h3>HTML5</h3>
+                            <p>Semantic structure</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">CSS</div>
+                        <div class="skill-info">
+                            <h3>CSS3</h3>
+                            <p>Modern styling</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">JS</div>
+                        <div class="skill-info">
+                            <h3>JavaScript</h3>
+                            <p>Interactive web apps</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">API</div>
+                        <div class="skill-info">
+                            <h3>REST APIs</h3>
+                            <p>API integration</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">GIT</div>
+                        <div class="skill-info">
+                            <h3>Git & GitHub</h3>
+                            <p>Version control</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">NODE</div>
+                        <div class="skill-info">
+                            <h3>Node.js</h3>
+                            <p>Backend development</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">EXP</div>
+                        <div class="skill-info">
+                            <h3>Express.js</h3>
+                            <p>Backend APIs</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">DB</div>
+                        <div class="skill-info">
+                            <h3>MongoDB</h3>
+                            <p>Database development</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="skills-marquee marquee-theme-neon" aria-label="My development skills">
+                <div class="skills-track">
+                    <div class="skills-group">
+                        <span class="marquee-item">HTML5 <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">CSS3 <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">JavaScript <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">Responsive Design <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">Git & GitHub <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">UI/UX Design <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">Frontend Development <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">CSS Animations <span class="marquee-star">✦</span></span>
+                    </div>
+
+                    <div class="skills-group" aria-hidden="true">
+                        <span class="marquee-item">HTML5 <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">CSS3 <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">JavaScript <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">Responsive Design <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">Git & GitHub <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">UI/UX Design <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">Frontend Development <span class="marquee-star">✦</span></span>
+                        <span class="marquee-item">CSS Animations <span class="marquee-star">✦</span></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="services-section" id="services">
+            <div class="services-container">
+
+                <div class="services-heading">
+                    <span class="section-label">MY SERVICES</span>
+
+                    <h2>
+                        What I Can
+                        <span>Build For You</span>
+                    </h2>
+
+                    <p>
+                        Practical web solutions focused on modern design,
+                        responsive experiences and useful functionality.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <div class="service-number">01</div>
+
+                        <div class="service-icon">WEB</div>
+
+                        <h3>Frontend Development</h3>
+
+                        <p>
+                            Modern and interactive websites built with clean,
+                            structured and maintainable frontend code.
+                        </p>
+
+                        <a href="pages/services.html" class="service-link">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-number">02</div>
+
+                        <div class="service-icon">UI</div>
+
+                        <h3>Responsive Web Design</h3>
+
+                        <p>
+                            Responsive interfaces designed to work smoothly
+                            across desktops, tablets and mobile devices.
+                        </p>
+
+                        <a href="pages/services.html" class="service-link">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-number">03</div>
+
+                        <div class="service-icon">JS</div>
+
+                        <h3>Interactive Web Apps</h3>
+
+                        <p>
+                            Dynamic web applications with useful interactions,
+                            animations and JavaScript functionality.
+                        </p>
+
+                        <a href="pages/services.html" class="service-link">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-number">04</div>
+
+                        <div class="service-icon">API</div>
+
+                        <h3>API & Backend Integration</h3>
+
+                        <p>
+                            Connecting web applications with APIs and backend
+                            services to create functional digital experiences.
+                        </p>
+
+                        <a href="pages/services.html" class="service-link">
+                            Learn More
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="featured-projects" id="projects">
+            <div class="featured-projects-container">
+
+                <div class="featured-projects-heading">
+                    <div>
+                        <span class="section-label">FEATURED PROJECTS</span>
+
+                        <h2>
+                            Work That
+                            <span>Speaks For Itself</span>
+                        </h2>
+                    </div>
+
+                    <a href="pages/projects.html" class="projects-view-all">
+                        View All Projects
+                    </a>
+                </div>
+
+                <div class="featured-projects-grid">
+
+                    <article class="featured-project-card">
+                        <div class="project-image project-image-shopora">
+                            <span>SHOPORA</span>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-top">
+                                <span class="project-category">WEB PROJECT</span>
+                                <span class="project-number">01</span>
+                            </div>
+
+                            <h3>Shopora</h3>
+
+                            <p>
+                                A modern e-commerce website focused on clean
+                                design, product presentation and responsive layouts.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <a href="pages/projects.html" class="project-link">
+                                View Project
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="featured-project-card">
+                        <div class="project-image project-image-foodie">
+                            <span>FOODIE</span>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-top">
+                                <span class="project-category">WEB PROJECT</span>
+                                <span class="project-number">02</span>
+                            </div>
+
+                            <h3>Foodie</h3>
+
+                            <p>
+                                A responsive food website designed with an engaging
+                                interface and interactive user experience.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <a href="pages/projects.html" class="project-link">
+                                View Project
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="featured-project-card">
+                        <div class="project-image project-image-weather">
+                            <span>WEATHER APP</span>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-top">
+                                <span class="project-category">JAVASCRIPT APP</span>
+                                <span class="project-number">03</span>
+                            </div>
+
+                            <h3>Weather App</h3>
+
+                            <p>
+                                A JavaScript application that uses weather data to
+                                provide useful information through an interactive UI.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>API</span>
+                                <span>JS</span>
+                            </div>
+
+                            <a href="pages/projects.html" class="project-link">
+                                View Project
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="why-section" id="why-work-with-me">
+            <div class="why-container">
+
+                <div class="why-content">
+                    <span class="section-label">WHY WORK WITH ME</span>
+
+                    <h2>
+                        Focused On
+                        <span>Building Better Websites</span>
+                    </h2>
+
+                    <p>
+                        I focus on creating websites that combine clean design,
+                        responsive layouts and useful functionality.
+                    </p>
+
+                    <a href="pages/contact.html" class="why-btn">
+                        Let's Work Together
+                    </a>
+                </div>
+
+                <div class="why-points">
+
+                    <div class="why-point">
+                        <div class="why-point-number">01</div>
+
+                        <div>
+                            <h3>Modern Design</h3>
+                            <p>
+                                Clean interfaces designed to create a professional
+                                and engaging user experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="why-point">
+                        <div class="why-point-number">02</div>
+
+                        <div>
+                            <h3>Responsive Development</h3>
+                            <p>
+                                Layouts built to adapt smoothly across desktop,
+                                tablet and mobile screens.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="why-point">
+                        <div class="why-point-number">03</div>
+
+                        <div>
+                            <h3>Interactive Experiences</h3>
+                            <p>
+                                JavaScript-powered interactions that make websites
+                                more useful and engaging.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="why-point">
+                        <div class="why-point-number">04</div>
+
+                        <div>
+                            <h3>Continuous Learning</h3>
+                            <p>
+                                Continuously improving my skills and exploring
+                                modern web development technologies.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="process-section" id="process">
+            <div class="process-container">
+
+                <div class="process-heading">
+                    <span class="section-label">MY PROCESS</span>
+
+                    <h2>
+                        From Idea To
+                        <span>Finished Website</span>
+                    </h2>
+
+                    <p>
+                        A simple and structured process for turning an idea
+                        into a functional and polished web experience.
+                    </p>
+                </div>
+
+                <div class="process-steps">
+
+                    <div class="process-step">
+                        <div class="process-number">01</div>
+
+                        <div class="process-line"></div>
+
+                        <div class="process-content">
+                            <h3>Discover</h3>
+
+                            <p>
+                                Understand the project, goals, audience and
+                                features needed for the website.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-number">02</div>
+
+                        <div class="process-line"></div>
+
+                        <div class="process-content">
+                            <h3>Plan</h3>
+
+                            <p>
+                                Organize the structure, layout, content and
+                                functionality before development begins.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-number">03</div>
+
+                        <div class="process-line"></div>
+
+                        <div class="process-content">
+                            <h3>Build</h3>
+
+                            <p>
+                                Develop the website using clean code,
+                                responsive layouts and interactive features.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-number">04</div>
+
+                        <div class="process-content">
+                            <h3>Refine</h3>
+
+                            <p>
+                                Test the website, improve the experience and
+                                polish the final details across devices.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="values-section" id="values">
+            <div class="values-container">
+
+                <div class="values-heading">
+                    <span class="section-label">WHAT I VALUE</span>
+
+                    <h2>
+                        Every Project Should
+                        <span>Feel Thoughtful</span>
+                    </h2>
+
+                    <p>
+                        My approach focuses on creating websites that are
+                        useful, responsive, clear and enjoyable to use.
+                    </p>
+                </div>
+
+                <div class="values-grid">
+
+                    <div class="value-card">
+                        <div class="value-number">01</div>
+
+                        <h3>Clean Structure</h3>
+
+                        <p>
+                            Organized layouts and structured code that make
+                            projects easier to understand and maintain.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-number">02</div>
+
+                        <h3>User Experience</h3>
+
+                        <p>
+                            Interfaces designed with clarity, usability and
+                            smooth interactions in mind.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-number">03</div>
+
+                        <h3>Responsive Design</h3>
+
+                        <p>
+                            Experiences that adapt naturally to different
+                            screen sizes and devices.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-number">04</div>
+
+                        <h3>Continuous Improvement</h3>
+
+                        <p>
+                            Learning, testing and refining projects to
+                            continuously improve the final result.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="github-section" id="github">
+            <div class="github-container">
+
+                <div class="github-content">
+                    <span class="section-label">GITHUB / DEVELOPER</span>
+
+                    <h2>
+                        Explore My
+                        <span>Code & Projects</span>
+                    </h2>
+
+                    <p>
+                        My GitHub contains projects, experiments and development
+                        work that reflect my learning journey and progress as a developer.
+                    </p>
+
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                        class="github-btn">
+                        Visit My GitHub
+                    </a>
+                </div>
+
+                <div class="github-card">
+
+                    <div class="github-card-top">
+                        <div class="github-avatar">
+                            AS
+                        </div>
+
+                        <div>
+                            <h3>Arslan Sahil</h3>
+                            <span>@arslansahil850-alt</span>
+                        </div>
+                    </div>
+
+                    <div class="github-card-line"></div>
+
+                    <div class="github-stats">
+
+                        <div class="github-stat">
+                            <strong>WEB</strong>
+                            <span>Development</span>
+                        </div>
+
+                        <div class="github-stat">
+                            <strong>JS</strong>
+                            <span>Projects</span>
+                        </div>
+
+                        <div class="github-stat">
+                            <strong>API</strong>
+                            <span>Learning</span>
+                        </div>
+
+                    </div>
+
+                    <div class="github-card-footer">
+                        <span>Arslan Weblab</span>
+                        <span>GitHub</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="cta-section" id="cta">
+            <div class="cta-container">
+
+                <div class="cta-content">
+                    <span class="section-label">LET'S BUILD SOMETHING</span>
+
+                    <h2>
+                        Have a Project
+                        <span>In Mind?</span>
+                    </h2>
+
+                    <p>
+                        Whether you have a complete idea or just a starting point,
+                        let's turn it into a modern and functional web experience.
+                    </p>
+
+                    <div class="cta-buttons">
+                        <a href="pages/contact.html" class="cta-btn cta-btn-primary">
+                            Start a Project
+                        </a>
+
+                        <a href="pages/projects.html" class="cta-btn cta-btn-secondary">
+                            View My Work
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cta-decoration">
+                    <div class="cta-circle cta-circle-one"></div>
+                    <div class="cta-circle cta-circle-two"></div>
+
+                    <div class="cta-card">
+                        <span>ARSLAN</span>
+                        <strong>WEBLAB</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact-preview" id="contact">
+            <div class="contact-container">
+
+                <div class="contact-content">
+                    <span class="section-label">CONTACT</span>
+
+                    <h2>
+                        Let's Start a
+                        <span>Conservation</span>
+                    </h2>
+
+                    <p>
+                        Have a website idea, project, or question?
+                        Send me a message and let's discuss what you want to build.
+                    </p>
+
+                    <div class="contact-details">
+
+                        <div class="contact-detail">
+                            <span class="contact-detail-label">EMAIL</span>
+                            <span class="contact-detail-value">Let's connect through the contact page</span>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span class="contact-detail-label">GITHUB</span>
+                            <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                                class="contact-detail-value">
+                                @arslansahil850-alt
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a href="pages/contact.html" class="contact-btn">
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="contact-visual">
+                    <div class="contact-orbit contact-orbit-one"></div>
+                    <div class="contact-orbit contact-orbit-two"></div>
+
+                    <div class="contact-card">
+                        <span>READY</span>
+                        <strong>TO BUILD?</strong>
+                        <small>ARSLAN WEBLAB</small>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo/logo.png" alt="Arslan Weblab Logo">
+                        Arslan <span>Weblab</span>
+                    </a>
+
+                    <p>
+                        Building modern, responsive and interactive
+                        digital experiences for the modern web.
+                    </p>
+
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                        class="footer-github">
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Navigation</h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="pages/about.html">About</a>
+                    <a href="pages/services.html">Services</a>
+                    <a href="pages/projects.html">Projects</a>
+                    <a href="pages/contact.html">Contact</a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Explore</h3>
+
+                    <a href="pages/projects.html">My Work</a>
+                    <a href="pages/case-studies.html">Case Studies</a>
+                    <a href="pages/services.html">Services</a>
+                    <a href="pages/contact.html">Let's Talk</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Arslan Weblab. All rights reserved.
+                </span>
+
+                <span>
+                    Built by Arslan
+                </span>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+
+</body>
+
+</html>

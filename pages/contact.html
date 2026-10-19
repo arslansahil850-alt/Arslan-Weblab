@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Arslan Weblab</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../assets/logo/logo.png" type="image/png">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <noscript><style>#pageLoader{display:none!important;}</style></noscript>
+    <script>
+        (function() {
+            var validThemes = ["system", "dark-blue", "light-blue", "white", "multi"];
+            var saved = "system";
+            try {
+                var stored = localStorage.getItem("selectedTheme") || localStorage.getItem("arslanWeblabTheme");
+                if (stored === "black") {
+                    saved = "dark-blue";
+                } else if (validThemes.indexOf(stored) !== -1) {
+                    saved = stored;
+                }
+            } catch (e) {
+                saved = "system";
+            }
+            var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var applied = saved === "system" ? (systemDark ? "dark-blue" : "light-blue") : saved;
+            document.documentElement.setAttribute("data-theme", applied);
+            document.documentElement.setAttribute("data-selected-theme", saved);
+        })();
+    </script>
+</head>
+
+
+<body>
+
+    <div id="pageLoader" class="page-loader" aria-hidden="true">
+        <div class="loader-track">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main Navigation">
+
+            <a href="../index.html" class="brand">
+                <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                Arslan<span> Weblab</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="about.html#skills" class="nav-link">Skills</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <div class="theme-switcher">
+                    <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-expanded="false"
+                        aria-controls="themeOptions" aria-label="Theme menu">
+                        <span class="theme-toggle-icon">◐</span>
+                        <span>Theme</span>
+                        <span class="theme-toggle-arrow">⌄</span>
+                    </button>
+
+                    <div class="theme-options" id="themeOptions" hidden>
+                        <div class="theme-options-heading">Choose a Theme</div>
+
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="more-button" id="moreButton" type="button" aria-label="Open more navigation"
+                    aria-expanded="false" aria-controls="moreMenu" title="More">
+                    ⋮
+                </button>
+
+                <a href="contact.html" class="nav-cta">Let's Talk</a>
+
+            </div>
+
+            <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+        <div class="more-menu" id="moreMenu" aria-label="More navigation links">
+            <a href="case-studies.html">
+                <span>Case Studies</span>
+                <span>↗</span>
+            </a>
+            <a href="services.html#process">
+                <span>Process</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#testimonials">
+                <span>Testimonials</span>
+                <span>↗</span>
+            </a>
+            <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#developer">
+                <span>Developer</span>
+                <span>↗</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+
+            
+            <div class="mobile-menu-section mobile-primary-nav">
+                <div class="mobile-section-label">Navigation</div>
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-nav-link">Home</a>
+                    <a href="projects.html" class="mobile-nav-link">Projects</a>
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="about.html" class="mobile-nav-link">About</a>
+                    <a href="about.html#skills" class="mobile-nav-link">Skills</a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-additional-nav">
+                <div class="mobile-section-label">More Links</div>
+                <div class="mobile-menu-links">
+                    <a href="case-studies.html" class="mobile-nav-link">
+                        <span>Case Studies</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="services.html#process" class="mobile-nav-link">
+                        <span>Process</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#testimonials" class="mobile-nav-link">
+                        <span>Testimonials</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
+                        <span>GitHub</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#developer" class="mobile-nav-link">
+                        <span>Developer</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-theme-section">
+                <div class="mobile-theme-wrapper">
+                    <button class="mobile-theme-button" id="mobileThemeButton" type="button" aria-expanded="false"
+                        aria-controls="mobileThemeOptions">
+                        <span class="mobile-theme-button-left">
+                            <span class="theme-toggle-icon">◐</span>
+                            <span>Theme:</span>
+                            <strong id="mobileThemeName">Multicolor</strong>
+                        </span>
+                        <span class="mobile-extra-arrow">⌄</span>
+                    </button>
+
+                    <div class="mobile-theme-options" id="mobileThemeOptions" hidden>
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-contact-section">
+                <a href="contact.html" class="mobile-cta">
+                    <span>Let's Talk</span>
+                    <span>→</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="page-hero-container">
+
+                <span class="section-label">CONTACT ME</span>
+
+                <h1>
+                    Let's Start A
+                    <span>Conversation</span>
+                </h1>
+
+                <p>
+                    Have a website idea, project or question?
+                    Send me a message and let's discuss what you want to build.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="contact-page-section">
+            <div class="contact-page-container">
+
+                <div class="contact-page-info">
+
+                    <span class="section-label">GET IN TOUCH</span>
+
+                    <h2>
+                        Have A Project
+                        <span>In Mind?</span>
+                    </h2>
+
+                    <p>
+                        Tell me about your idea, what you want to build
+                        and what you need help with. I'll use the information
+                        to understand your project.
+                    </p>
+
+                    <div class="contact-page-details">
+
+                        <div class="contact-page-detail">
+                            <span>EMAIL</span>
+                            <a href="mailto:arslansahil850@gmail.com?subject=Project%20Inquiry%20-%20Arslan%20Weblab">
+                                arslansahil850@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="contact-page-detail">
+                            <span>GITHUB</span>
+
+                            <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer">
+                                @arslansahil850-alt
+                            </a>
+                        </div>
+
+                        <div class="contact-page-detail">
+                            <span>STATUS</span>
+                            <strong>Open For Projects</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-form-card">
+
+                    <div class="contact-form-heading">
+                        <span>PROJECT MESSAGE</span>
+                        <strong>Tell Me About It</strong>
+                    </div>
+
+                    <form class="contact-form" action="https://formsubmit.co/arslansahil850@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <input type="hidden" name="_subject" value="New Project Inquiry - Arslan Weblab">
+
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="contact-form-row">
+
+                            <div class="contact-form-group">
+                                <label for="name">Name</label>
+
+                                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+                            </div>
+
+                            <div class="contact-form-group">
+                                <label for="email">Email</label>
+
+                                <input type="email" id="email" name="email" placeholder="Your email" autocomplete="email" required>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="project">Project Type</label>
+
+                            <select id="project" name="project" required>
+                                <option value="" selected disabled>
+                                    Select project type
+                                </option>
+
+                                <option value="Website">
+                                    Website
+                                </option>
+
+                                <option value="Web Application">
+                                    Web Application
+                                </option>
+
+                                <option value="E-Commerce">
+                                    E-Commerce
+                                </option>
+
+                                <option value="API / Web App">
+                                    API / Web App
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="message">Message</label>
+
+                            <textarea id="message" name="message" rows="7" placeholder="Tell me about your project..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="contact-submit-btn">
+                            Send Message
+                        </button>
+
+                        <div id="contactFormStatus" class="contact-form-status" role="status" aria-live="polite" hidden></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="contact-options-section">
+            <div class="contact-options-container">
+
+                <div class="contact-options-heading">
+                    <span class="section-label">CONNECT WITH ME</span>
+                    <h2>Choose Your <span>Preferred Way</span></h2>
+                    <p>
+                        Have a project idea or a question? Choose whichever contact
+                        method works best for you.
+                    </p>
+                </div>
+
+                <div class="contact-options-grid">
+
+                    <article class="contact-option-card contact-option-whatsapp">
+                        <div class="contact-option-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+
+                        <span class="contact-option-label">QUICK CONTACT</span>
+                        <h3>WhatsApp</h3>
+
+                        <p>
+                            Contact me directly to discuss your website idea,
+                            project requirements, or questions.
+                        </p>
+
+                        <a href="https://wa.me/923437773393?text=Hello%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." class="contact-option-btn" id="whatsappContactBtn" target="_blank"
+                            rel="noopener noreferrer">
+                            Contact on WhatsApp
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="contact-option-card contact-option-facebook">
+                        <div class="contact-option-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+
+                        <span class="contact-option-label">SOCIAL CONTACT</span>
+                        <h3>Facebook</h3>
+
+                        <p>
+                            Visit my Facebook profile to connect with me
+                            and send a message.
+                        </p>
+
+                        <a href="https://www.facebook.com/share/18c4n4kW56/" class="contact-option-btn" target="_blank"
+                            rel="noopener noreferrer">
+                            Connect on Facebook
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="contact-option-card contact-option-email">
+                        <div class="contact-option-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+
+                        <span class="contact-option-label">EMAIL CONTACT</span>
+                        <h3>Email / Gmail</h3>
+
+                        <p>
+                            Prefer email? Send your project details or questions
+                            through your default mail app or Gmail.
+                        </p>
+
+                        <div class="contact-option-actions">
+                            <a href="mailto:arslansahil850@gmail.com?subject=Project%20Inquiry%20-%20Arslan%20Weblab"
+                                class="contact-option-btn" id="emailContactBtn">
+                                Send Email
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arslansahil850%40gmail.com&su=Project%20Inquiry%20-%20Arslan%20Weblab"
+                                class="contact-option-sublink" id="gmailComposeBtn" target="_blank" rel="noopener noreferrer">
+                                Open in Gmail Compose ↗
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-process-section">
+            <div class="contact-process-container">
+
+                <div class="contact-process-heading">
+
+                    <span class="section-label">WHAT HAPPENS NEXT</span>
+
+                    <h2>
+                        From Message
+                        <span>To Project</span>
+                    </h2>
+
+                </div>
+
+                <div class="contact-process-grid">
+
+                    <div class="contact-process-item">
+                        <span>01</span>
+                        <h3>Send</h3>
+                        <p>
+                            Send your project idea and basic requirements
+                            through the contact form.
+                        </p>
+                    </div>
+
+                    <div class="contact-process-item">
+                        <span>02</span>
+                        <h3>Discuss</h3>
+                        <p>
+                            Review the idea and discuss the features,
+                            goals and project requirements.
+                        </p>
+                    </div>
+
+                    <div class="contact-process-item">
+                        <span>03</span>
+                        <h3>Plan</h3>
+                        <p>
+                            Organize the project structure and decide
+                            the appropriate development approach.
+                        </p>
+                    </div>
+
+                    <div class="contact-process-item">
+                        <span>04</span>
+                        <h3>Build</h3>
+                        <p>
+                            Turn the agreed idea into a responsive
+                            and functional web experience.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                        Arslan <span>Weblab</span>
+                    </a>
+
+                    <p>
+                        Building modern, responsive and interactive
+                        digital experiences for the modern web.
+                    </p>
+
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                        class="footer-github">
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Navigation</h3>
+
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Explore</h3>
+
+                    <a href="projects.html">My Work</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Let's Talk</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Arslan Weblab. All rights reserved.</span>
+                <span>Built by Arslan</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/contact.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Arslan Weblab</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../assets/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <noscript><style>#pageLoader{display:none!important;}</style></noscript>
+    <script>
+        (function() {
+            var validThemes = ["system", "dark-blue", "light-blue", "white", "multi"];
+            var saved = "system";
+            try {
+                var stored = localStorage.getItem("selectedTheme") || localStorage.getItem("arslanWeblabTheme");
+                if (stored === "black") {
+                    saved = "dark-blue";
+                } else if (validThemes.indexOf(stored) !== -1) {
+                    saved = stored;
+                }
+            } catch (e) {
+                saved = "system";
+            }
+            var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var applied = saved === "system" ? (systemDark ? "dark-blue" : "light-blue") : saved;
+            document.documentElement.setAttribute("data-theme", applied);
+            document.documentElement.setAttribute("data-selected-theme", saved);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div id="pageLoader" class="page-loader" aria-hidden="true">
+        <div class="loader-track">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+  
+
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main Navigation">
+
+            <a href="../index.html" class="brand">
+                <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                Arslan<span> Weblab</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="about.html#skills" class="nav-link">Skills</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <div class="theme-switcher">
+                    <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-expanded="false"
+                        aria-controls="themeOptions" aria-label="Theme menu">
+                        <span class="theme-toggle-icon">◐</span>
+                        <span>Theme</span>
+                        <span class="theme-toggle-arrow">⌄</span>
+                    </button>
+
+                    <div class="theme-options" id="themeOptions" hidden>
+                        <div class="theme-options-heading">Choose a Theme</div>
+
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="more-button" id="moreButton" type="button" aria-label="Open more navigation"
+                    aria-expanded="false" aria-controls="moreMenu" title="More">
+                    ⋮
+                </button>
+
+                <a href="contact.html" class="nav-cta">Let's Talk</a>
+
+            </div>
+
+            <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+        <div class="more-menu" id="moreMenu" aria-label="More navigation links">
+            <a href="case-studies.html">
+                <span>Case Studies</span>
+                <span>↗</span>
+            </a>
+            <a href="services.html#process">
+                <span>Process</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#testimonials">
+                <span>Testimonials</span>
+                <span>↗</span>
+            </a>
+            <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <span>↗</span>
+            </a>
+            <a href="about.html#developer">
+                <span>Developer</span>
+                <span>↗</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+
+            
+            <div class="mobile-menu-section mobile-primary-nav">
+                <div class="mobile-section-label">Navigation</div>
+                <div class="mobile-menu-links">
+                    <a href="../index.html" class="mobile-nav-link">Home</a>
+                    <a href="projects.html" class="mobile-nav-link">Projects</a>
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="about.html" class="mobile-nav-link active">About</a>
+                    <a href="about.html#skills" class="mobile-nav-link">Skills</a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-additional-nav">
+                <div class="mobile-section-label">More Links</div>
+                <div class="mobile-menu-links">
+                    <a href="case-studies.html" class="mobile-nav-link">
+                        <span>Case Studies</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="services.html#process" class="mobile-nav-link">
+                        <span>Process</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#testimonials" class="mobile-nav-link">
+                        <span>Testimonials</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
+                        <span>GitHub</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                    <a href="about.html#developer" class="mobile-nav-link">
+                        <span>Developer</span>
+                        <span class="mobile-nav-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-theme-section">
+                <div class="mobile-theme-wrapper">
+                    <button class="mobile-theme-button" id="mobileThemeButton" type="button" aria-expanded="false"
+                        aria-controls="mobileThemeOptions">
+                        <span class="mobile-theme-button-left">
+                            <span class="theme-toggle-icon">◐</span>
+                            <span>Theme:</span>
+                            <strong id="mobileThemeName">Multicolor</strong>
+                        </span>
+                        <span class="mobile-extra-arrow">⌄</span>
+                    </button>
+
+                    <div class="mobile-theme-options" id="mobileThemeOptions" hidden>
+                        <button class="theme-option" type="button" data-theme-option="system" aria-pressed="false">
+                            <span class="theme-preview theme-preview-system"></span>
+                            <span class="theme-option-name">System Theme</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="dark-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-dark"></span>
+                            <span class="theme-option-name">Dark Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="light-blue" aria-pressed="false">
+                            <span class="theme-preview theme-preview-light-blue"></span>
+                            <span class="theme-option-name">Light Blue</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="white" aria-pressed="false">
+                            <span class="theme-preview theme-preview-white"></span>
+                            <span class="theme-option-name">Pure White</span>
+                            <span class="theme-check"></span>
+                        </button>
+
+                        <button class="theme-option" type="button" data-theme-option="multi" aria-pressed="false">
+                            <span class="theme-preview theme-preview-multi"></span>
+                            <span class="theme-option-name">Multicolor</span>
+                            <span class="theme-check"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mobile-menu-section mobile-contact-section">
+                <a href="contact.html" class="mobile-cta">
+                    <span>Let's Talk</span>
+                    <span>→</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="page-hero-container">
+
+                <span class="section-label">ABOUT ME</span>
+
+                <h1>
+                    Building My
+                    <span>Journey In Web Development</span>
+                </h1>
+
+                <p>
+                    I'm Arslan, a web developer focused on creating modern,
+                    responsive and interactive digital experiences.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="about-page-section" id="developer">
+            <div class="about-page-container">
+
+                <div class="about-page-content">
+
+                    <span class="section-label">MY STORY</span>
+
+                    <h2>
+                        From Learning Code To
+                        <span>Building Projects</span>
+                    </h2>
+
+                    <p>
+                        My journey in web development started with learning
+                        the fundamentals of HTML, CSS and JavaScript.
+                        Since then, I've focused on building practical
+                        projects that help me turn what I learn into real
+                        experiences.
+                    </p>
+
+                    <p>
+                        I enjoy working on responsive interfaces,
+                        interactive web applications and modern website
+                        experiences. Each project gives me an opportunity
+                        to improve my skills and explore new technologies.
+                    </p>
+
+                    <p>
+                        I'm continuously expanding my knowledge across
+                        frontend and backend development while building
+                        projects that reflect my progress as a developer.
+                    </p>
+
+                </div>
+
+                <div class="about-page-card">
+
+                    <div class="about-page-card-top">
+                        <span>ARSLAN</span>
+                        <span>WEBLAB</span>
+                    </div>
+
+                    <div class="about-page-card-main">
+                        <strong>WEB</strong>
+                        <span>DEVELOPER</span>
+                    </div>
+
+                    <div class="about-page-card-bottom">
+                        <span>CREATE</span>
+                        <span>LEARN</span>
+                        <span>BUILD</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-skills-preview" id="skills">
+            <div class="about-skills-container">
+
+                <div class="about-skills-heading">
+                    <span class="section-label">WHAT I WORK WITH</span>
+
+                    <h2>
+                        My Core
+                        <span>Technologies</span>
+                    </h2>
+                </div>
+
+                <div class="about-skills-grid">
+
+                    <div class="about-skill-item">
+                        <span>01</span>
+                        <h3>HTML5</h3>
+                        <p>Semantic and structured web development.</p>
+                    </div>
+
+                    <div class="about-skill-item">
+                        <span>02</span>
+                        <h3>CSS3</h3>
+                        <p>Responsive layouts and modern interfaces.</p>
+                    </div>
+
+                    <div class="about-skill-item">
+                        <span>03</span>
+                        <h3>JavaScript</h3>
+                        <p>Interactive and dynamic web experiences.</p>
+                    </div>
+
+                    <div class="about-skill-item">
+                        <span>04</span>
+                        <h3>Backend</h3>
+                        <p>Learning Node.js, Express.js and APIs.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="journey-section" id="journey">
+            <div class="journey-container">
+
+                <div class="journey-heading">
+                    <span class="journey-eyebrow">BEHIND THE CODE</span>
+                    <h2>My Journey & <span>Growth</span></h2>
+                    <p>
+                        Every project is an opportunity to learn something new,
+                        solve a problem, and become a better developer.
+                    </p>
+                </div>
+
+                <div class="journey-content">
+
+                    <div class="journey-intro">
+                        <div class="journey-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+
+                        <h3>Learning by Building</h3>
+
+                        <p>
+                            I believe the best way to improve as a frontend developer
+                            is to turn ideas into real projects. I focus on writing
+                            structured HTML, creating responsive layouts with CSS,
+                            and using JavaScript to bring interfaces to life.
+                        </p>
+
+                        <p>
+                            Through hands-on projects, I continue improving my
+                            design sense, problem-solving skills, and understanding
+                            of how modern websites work.
+                        </p>
+
+                        <a href="projects.html" class="journey-link">
+                            Explore My Projects
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="journey-timeline">
+
+                        <article class="journey-step">
+                            <div class="journey-step-marker">
+                                <i class="fas fa-check"></i>
+                            </div>
+
+                            <div class="journey-step-content">
+                                <span class="journey-step-label">FOUNDATION</span>
+                                <h3>Building the Fundamentals</h3>
+                                <p>
+                                    Learning HTML and CSS to create structured,
+                                    accessible, and visually appealing web pages.
+                                </p>
+                                <div class="journey-tags">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>Responsive Design</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="journey-step">
+                            <div class="journey-step-marker">
+                                <i class="fas fa-code"></i>
+                            </div>
+
+                            <div class="journey-step-content">
+                                <span class="journey-step-label">PRACTICE</span>
+                                <h3>Creating Real-World Projects</h3>
+                                <p>
+                                    Building websites for different industries,
+                                    including fitness, e-commerce, real estate,
+                                    education, and business services.
+                                </p>
+                                <div class="journey-tags">
+                                    <span>UI Development</span>
+                                    <span>Web Design</span>
+                                    <span>Project Building</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="journey-step">
+                            <div class="journey-step-marker">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+
+                            <div class="journey-step-content">
+                                <span class="journey-step-label">CURRENT FOCUS</span>
+                                <h3>Improving Interactivity</h3>
+                                <p>
+                                    Strengthening JavaScript skills, building
+                                    interactive components, improving accessibility,
+                                    and refining responsive behavior.
+                                </p>
+                                <div class="journey-tags">
+                                    <span>JavaScript</span>
+                                    <span>DOM</span>
+                                    <span>Animations</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="journey-step journey-step-future">
+                            <div class="journey-step-marker">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+
+                            <div class="journey-step-content">
+                                <span class="journey-step-label">FUTURE GOALS</span>
+                                <h3>Expanding My Skills</h3>
+                                <p>
+                                    I plan to advance my JavaScript skills, learn backend development,
+                                    work with databases and APIs, and explore graphic design and UI/UX
+                                    design. My goal is to build complete web applications and create
+                                    engaging digital experiences.
+                                </p>
+
+                                <div class="journey-tags">
+                                    <span>Advanced JavaScript</span>
+                                    <span>Backend Development</span>
+                                    <span>Databases & APIs</span>
+                                    <span>Graphic Design</span>
+                                    <span>UI/UX Design</span>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div class="journey-bottom" id="testimonials">
+                    <div>
+                        <span class="journey-bottom-label">MY LONG-TERM VISION</span>
+                        <h3>From Frontend Developer to Versatile Creator</h3>
+                        <p>
+                            My goal is to become a well-rounded developer by mastering frontend
+                            development, learning backend technologies, and exploring graphic
+                            design. I want to build complete web applications and create
+                            meaningful digital experiences that combine functionality,
+                            creativity, and thoughtful design.
+                        </p>
+                    </div>
+
+                    <a href="contact.html" class="journey-contact-btn">
+                        Let's Connect
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/logo/logo.png" alt="Arslan Weblab Logo">
+                        Arslan <span>Weblab</span>
+                    </a>
+
+                    <p>
+                        Building modern, responsive and interactive
+                        digital experiences for the modern web.
+                    </p>
+
+                    <a href="https://github.com/arslansahil850-alt" target="_blank" rel="noopener noreferrer"
+                        class="footer-github">
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Navigation</h3>
+
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3>Explore</h3>
+
+                    <a href="projects.html">My Work</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Let's Talk</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Arslan Weblab. All rights reserved.</span>
+                <span>Built by Arslan</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+
+
+</body>
+
+</html>
