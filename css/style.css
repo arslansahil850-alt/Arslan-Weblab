@@ -2665,7 +2665,7 @@ a.contact-detail-value:hover {
 ::-webkit-scrollbar-thumb {
     background: #3a3a40;
     border-radius: 99px;
-    border: 2px solid transparent;                
+    border: 2px solid transparent;
     background-clip: padding-box;
 }
 
@@ -2675,7 +2675,7 @@ a.contact-detail-value:hover {
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: #d4af37;                          
+    background: #d4af37;
     background-clip: padding-box;
 }
 
@@ -2755,8 +2755,79 @@ a.contact-detail-value:hover {
     0% {
         transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(250%);
     }
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md, 12px);
+
+    /* Theme-integrated appearance */
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px var(--shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Flexbox centering for SVG icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    /* Initial hidden state with smooth transition */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px) scale(0.9);
+    transition:
+        opacity var(--transition, 0.3s ease),
+        visibility var(--transition, 0.3s ease),
+        transform var(--transition, 0.3s ease),
+        background-color var(--transition, 0.3s ease),
+        border-color var(--transition, 0.3s ease),
+        color var(--transition, 0.3s ease);
+}
+
+/* Active visible state when scrolled down */
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Hover & Focus states styled with your accent colors */
+.back-to-top:hover,
+.back-to-top:focus-visible {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent-hover);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px var(--shadow), 0 0 12px var(--accent-soft);
+    outline: none;
+}
+
+/* Active click effect */
+.back-to-top:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Responsive adjustment for smaller mobile screens */
+@media (max-width: 640px) {
+    .back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+}
